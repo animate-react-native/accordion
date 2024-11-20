@@ -16,7 +16,7 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 const AccordionContext = createContext({
   isOpen: false,
-  accordionIsOpen: () => {},
+  toggle: () => {},
 });
 
 // type AccordionProvider = ContextType<typeof AccordionContext>;
@@ -44,14 +44,14 @@ function Provider({
   isOpen?: boolean;
   onChange?: (value: boolean) => void;
 } & AnimatedProps<ViewProps>) {
-  const [isOpen, accordionIsOpen] = useState(!!initialIsOpen);
+  const [isOpen, setIsOpen] = useState(!!initialIsOpen);
   return (
     <AccordionContext.Provider
       value={{
         isOpen,
-        accordionIsOpen: () => {
+        toggle: () => {
           onChange?.(!isOpen);
-          accordionIsOpen((prev) => {
+          setIsOpen((prev) => {
             return !prev;
           });
         },
@@ -69,13 +69,9 @@ function Provider({
 }
 
 function Header({ children }: { children: React.ReactNode }) {
-  const { accordionIsOpen } = useAccordion();
+  const { toggle } = useAccordion();
 
-  return (
-    <AnimatedPressable onPress={() => accordionIsOpen()}>
-      {children}
-    </AnimatedPressable>
-  );
+  return <AnimatedPressable onPress={toggle}>{children}</AnimatedPressable>;
 }
 
 function Icon({
