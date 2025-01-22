@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "./",
+    "baseUrl": "./",
+    "rootDir": ".",
     "paths": {
       "@animatereactnative/accordion": ["./src/index"]
     },
