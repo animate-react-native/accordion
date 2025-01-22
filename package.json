@@ -1,6 +1,6 @@
 {
   "name": "@animatereactnative/accordion",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A React Native Accordion component, powered by React Native Reanimated layout animation that's capable of rendering and animating content that has a dynamic height.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
