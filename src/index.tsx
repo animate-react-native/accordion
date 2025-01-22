@@ -200,3 +200,5 @@ export const Accordion = {
    */
   Sibling,
 };
+
+export default Accordion;
