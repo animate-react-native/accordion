@@ -1,3 +1,5 @@
+![@animatereactnative/accordion](https://raw.githubusercontent.com/animate-react-native/accordion/main/docs/banner.png)
+
 <div align="center">
 <h1>React Native Accordion</h1>
 
