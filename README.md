@@ -1,4 +1,7 @@
-![@animatereactnative/accordion](https://raw.githubusercontent.com/animate-react-native/accordion/main/docs/banner.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/animate-react-native/accordion/main/docs/banner-dark.png">
+  <img alt="@animatereactnative/accordion" src="https://raw.githubusercontent.com/animate-react-native/accordion/main/docs/banner.png">
+</picture>
 
 <div align="center">
 <h1>React Native Accordion</h1>
